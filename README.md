@@ -32,7 +32,7 @@ Cloudflare Pages Function  ← /functions/api.js  (proxy)
         │
         │  forwards request + hides real Worker URL
         ▼
-Cloudflare Worker  ← ace-clouds-backend
+Cloudflare Worker  ← ace-clouds
         │
         │  GitHub REST API v3
         ▼
@@ -128,7 +128,7 @@ After your first deploy, go to **Pages → Your Project → Settings → Environ
 
 | Variable | Value |
 |---|---|
-| `WORKER_URL` | `https://ace-clouds-backend.<your-subdomain>.workers.dev` |
+| `WORKER_URL` | `https://<your-subdomain>.workers.dev` |
 
 Then go to **Deployments → Retry deployment** (or push a new commit) so the Pages Function picks up the new variable.
 
@@ -138,7 +138,7 @@ Then go to **Deployments → Retry deployment** (or push a new commit) so the Pa
 
 ### Step 5 — Verify
 
-Open your Pages URL (e.g. `https://ace-clouds.pages.dev`).
+Open your Pages URL (e.g. `https://your_pages_url.pages.dev`).
 
 - ✅ The **All Files** tab should load (empty repo will show "No files found")
 - ✅ Upload a test file — it should appear in your GitHub storage repo
